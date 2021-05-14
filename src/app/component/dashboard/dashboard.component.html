@@ -1,0 +1,43 @@
+<nav class="navbar navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Dashboard</a>
+    <button type="button" class="btn btn-dark" (click)="onSignOut()">
+      <i class="fa fa-sign-out fa-lg" aria-hidden="true"></i>Sign out</button>
+  </div>
+</nav>
+<div class="container">
+  <!--- D3 element -->
+  <div class="row align-items-center">
+    <h2>Overview</h2>
+    <div class="col">
+      <div class="card" style="width: max-content;">
+        <div class="card-header">
+          Card Title
+        </div>
+        <div class="card-body" *ngIf="donutData !== undefined">
+          <p class="card-text">
+            <app-donut-chart [data]=donutData></app-donut-chart>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="card" style="width: max-content;">
+        <div class="card-header">
+          Card Title
+        </div>
+        <div class="card-body" *ngIf="chartData !== undefined">
+          <p class="card-text">
+            <app-bar-chart [data]=chartData></app-bar-chart>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--- table -->
+  <h2>User List</h2>
+  <div *ngIf="tableData !== undefined">
+    <app-table-list [data]=tableData></app-table-list>
+  </div>
+</div>
