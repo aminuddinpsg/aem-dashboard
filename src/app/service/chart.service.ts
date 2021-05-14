@@ -10,7 +10,7 @@ import { map } from 'rxjs/operators';
 export class ChartService {
 
   private http: HttpClient
-  private chartEndpoint = 'http://localhost:3000/data';
+  private chartEndpoint = 'http://localhost:3000/api/dashboard';
 
   constructor(http: HttpClient) { 
     this.http = http;

@@ -12,7 +12,7 @@ export class AuthenticationService {
 
   private currentUserSubject: BehaviorSubject<User>;
   public currentUser: Observable<User>;
-  private loginEndpoint: string = 'http://localhost:3000/user';
+  private loginEndpoint: string = 'http://localhost:3000/api/login';
 
   constructor(private http: HttpClient) {
     this.http = http;
